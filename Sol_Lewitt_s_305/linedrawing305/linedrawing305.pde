@@ -22,7 +22,7 @@ void draw(){
   arc(750,250, 200,200, HALF_PI, radians(270));
   
   //Perpindicular bisecting line
-line(550,175,750,250);
+//line(550,175,750,250);
  
  
  
