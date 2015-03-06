@@ -1,8 +1,8 @@
 /*Circuit Bender
-This was my attempt to make an expermential noise show
-come to life in Processing. Turn down the volume and guide your
-mouse over the rows.
-*/
+ This was my attempt to make an expermential noise show
+ come to life in Processing. Turn down the volume and guide your
+ mouse over the rows.
+ */
 
 //For better documentation, visit http://sites.bxmc.poly.edu/~nicholaspetrilla/creativecode/
 
@@ -12,39 +12,39 @@ Tile [] tile = new Tile[9];
 
 
 /*I commented out anything having to do with the Mover array, for now.
-//Mover[] movers = new Mover[2];
-//float windNoise = 100;
+ //Mover[] movers = new Mover[2];
+ //float windNoise = 100;
+ 
+ 
+ 
+ import ddf.minim.*;
+ import ddf.minim.ugens.*;
+ 
+ Minim minim;
+ AudioOutput out;
+ 
+ AudioSample kick;
+ AudioSample snare;
+ 
+ void setup() {
+ size(800, 600);
+ 
+ //array loop for the columns
+ for (int i=0; i<tile.length; i++) {
+ tile[i] = new Tile(color (0), 0, i*100);
+ }
+ 
+/* //loop for mover array 
+ for (int m = 0; m < movers.length; m++) {
+ movers[m] = new Mover(random(1, 4), random(width), 0);
+ }
+ 
+ */
 
-
-
-import ddf.minim.*;
-import ddf.minim.ugens.*;
-
-Minim minim;
-AudioOutput out;
-
-AudioSample kick;
-AudioSample snare;
-
-void setup() {
-  size(800, 600);
-
-  //array loop for the columns
-  for (int i=0; i<tile.length; i++) {
-    tile[i] = new Tile(color (0), 0, i*100);
-  }
-
-  /* //loop for mover array 
-   for (int m = 0; m < movers.length; m++) {
-   movers[m] = new Mover(random(1, 4), random(width), 0);
-   }
-   
-   */
-
-  minim = new Minim(this);
-  // use the getLineOut method of the Minim object to get an AudioOutput object
-  out = minim.getLineOut();
-  smooth();
+minim = new Minim(this);
+// use the getLineOut method of the Minim object to get an AudioOutput object
+out = minim.getLineOut();
+smooth();
 }
 
 void draw() {
@@ -118,7 +118,7 @@ void draw() {
       for (int i = 0; i < out.bufferSize () - 1; i++)
       {
         line( i, 25 + out.left.get(i)*50, i+1, 25 + out.left.get(i+1)*50 );
-       // line( i, 150 + out.right.get(i)*50, i+1, 150 + out.right.get(i+1)*50 );
+        // line( i, 150 + out.right.get(i)*50, i+1, 150 + out.right.get(i+1)*50 );
       }
     } 
 
