@@ -14,7 +14,7 @@ Tile [] tile = new Tile[9];
 /*I commented out anything having to do with the Mover array, for now.
  //Mover[] movers = new Mover[2];
  //float windNoise = 100;
- 
+ */
  
  
  import ddf.minim.*;
